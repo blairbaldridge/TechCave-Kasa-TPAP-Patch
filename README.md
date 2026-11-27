@@ -13,11 +13,11 @@ Unofficial, temporary workaround for Kasa KS205 switches (hardware 1.0, firmware
 5. In the app's Configuration tab set action to `install` and confirm_backup to true, save, then click Start. Check the app log for SUCCESS. The app exits after its operation.
 6. Restart Home Assistant Core manually. Check logs and test an affected switch and previously working devices. Do not delete any existing integration entries, devices or entities.
 
-Start on boot is disabled. The app does not run continuously, restart Core automatically or request Kasa credentials. It writes to the Home Assistant configuration directory. It refuses to overwrite an existing custom tplink override, including an older TechCave installation.
+After each operation reset action to status and confirm_backup to false. Start on boot is disabled. The app does not run continuously, restart Core automatically or request Kasa credentials. It writes to the Home Assistant configuration directory. It refuses to overwrite an existing custom tplink override, including an older TechCave installation.
 
 ## Rollback / upgrading Core
 
-Before upgrading Core, set action to `rollback`, save and start the app. Check its log and restart Core. This moves only a recognized TechCave override to a backup directory outside custom_components; the wheel is retained. Uninstalling the app alone does NOT remove the override. If dependency conflicts remain, restore the full backup. Do not delete existing entities or integration entries.
+Before upgrading Core, set action to `rollback` and confirm_backup to true, save and start the app. Check its log and restart Core. This moves only a recognized TechCave override to a backup directory outside custom_components; the wheel is retained. Uninstalling the app alone does NOT remove the override. If dependency conflicts remain, restore the full backup. Do not delete existing entities or integration entries.
 
 ## Manual installation (advanced)
 

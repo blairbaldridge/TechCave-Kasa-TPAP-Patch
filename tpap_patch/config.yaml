@@ -1,0 +1,24 @@
+name: TechCave Kasa TPAP Patch
+version: "0.1.0"
+slug: techcave_kasa_tpap
+description: Experimental installer for KS205 TPAP support on Core 2026.10.4
+url: https://github.com/blairbaldridge/TechCave-Kasa-TPAP-Patch
+arch:
+  - aarch64
+  - amd64
+startup: once
+boot: manual_only
+stage: experimental
+init: true
+hassio_api: true
+hassio_role: default
+map:
+  - type: homeassistant_config
+    read_only: false
+    path: /ha_config
+options:
+  action: status
+  confirm_backup: false
+schema:
+  action: list(status|install|rollback)
+  confirm_backup: bool
