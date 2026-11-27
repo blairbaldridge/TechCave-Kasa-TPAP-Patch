@@ -7,5 +7,5 @@ FROM python:3.13-slim-bookworm
 COPY --from=builder /payload /payload
 COPY manage_patch.py /manage_patch.py
 COPY test_manage_patch.py /test_manage_patch.py
-RUN python -m unittest discover -s / -p test_manage_patch.py
+RUN cd / && python -m unittest -v test_manage_patch
 CMD ["python", "-u", "/manage_patch.py", "app"]
