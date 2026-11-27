@@ -6,9 +6,11 @@ Unofficial, temporary workaround for Kasa KS205 switches (hardware 1.0, firmware
 
 ## Install using Home Assistant OS (recommended after testing)
 
+[![Add repository to Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fblairbaldridge%2FTechCave-Kasa-TPAP-Patch)
+
 1. Create and download a full Home Assistant backup.
 2. Open Settings → Apps (Add-ons) → App store → ⋮ → Repositories.
-3. Add this repository: https://github.com/blairbaldridge/TechCave-Kasa-TPAP-Patch
+3. Add this repository (or use the button above): https://github.com/blairbaldridge/TechCave-Kasa-TPAP-Patch
 4. Install **TechCave Kasa TPAP Patch**. The image builds the pinned dependency locally; this can take several minutes.
 5. In the app's Configuration tab set action to `install` and confirm_backup to true, save, then click Start. Check the app log for SUCCESS. The app exits after its operation.
 6. Restart Home Assistant Core manually. Check logs and test an affected switch and previously working devices. Do not delete any existing integration entries, devices or entities.
